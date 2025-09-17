@@ -1,0 +1,82 @@
+.files-page {
+  padding: 20px;
+}
+
+.files-page-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.files-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.file-card {
+  background: linear-gradient(
+    90deg,
+    hsla(186, 33%, 94%, 1) 0%,
+    hsla(216, 41%, 79%, 1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid #ccc;
+  height: 200px;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.file-name {
+  text-transform: capitalize;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.file-details {
+  font-size: 14px;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-evenly;
+}
+
+.file-actions a {
+  padding: 6px 10px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.view-btn {
+  text-decoration: none;
+  background-color: #2a6cfc;
+  color: white;
+}
+
+.download-btn {
+  text-decoration: none;
+  background-color: #00a63e;
+  color: white;
+}
+
+.view-btn:hover {
+  background-color: #245ecf;
+}
+
+.download-btn:hover {
+  background-color: #008730;
+}
+
+.no-files {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+}

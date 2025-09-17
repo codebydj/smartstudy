@@ -1,0 +1,153 @@
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
+  padding: 2rem;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.upload-form h2 {
+  color: #2a6cfc;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.upload-form-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.DataInputDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.DataInputDiv > label {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  border: 2px solid #e1e1e1;
+  background: #f8f9fa;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  border-color: #2a6cfc;
+  box-shadow: 0 0 0 3px rgba(42, 108, 252, 0.1);
+  outline: none;
+}
+
+.input:hover {
+  border-color: #2a6cfc;
+}
+
+select.input {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
+}
+
+.UploadButton {
+  margin: 2rem auto;
+  padding: 0.8rem 2rem;
+  width: auto;
+  min-width: 200px;
+  height: auto;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2a6cfc;
+  background: transparent;
+  border: 2px solid #2a6cfc;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.UploadButton:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 300%;
+  height: 300%;
+  background: linear-gradient(45deg, #2a6cfc, #a439ff);
+  transition: all 0.6s ease;
+  border-radius: 50px;
+  z-index: -1;
+}
+
+.UploadButton:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.UploadButton:hover:before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Responsive Design */
+@media screen and (min-width: 768px) {
+  .DataInputDiv {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .DataInputDiv > label {
+    min-width: 120px;
+    margin-left: 0;
+  }
+
+  .input {
+    flex: 1;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .upload-form {
+    width: 95%;
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  .upload-form h2 {
+    font-size: 1.5rem;
+  }
+
+  .DataInputDiv > label {
+    margin-bottom: 0.25rem;
+  }
+
+  .UploadButton {
+    min-width: 150px;
+  }
+}
